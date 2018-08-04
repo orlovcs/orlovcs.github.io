@@ -15,6 +15,7 @@
 
 	
 	
+	
     <title>Nikita Orlov</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -22,6 +23,7 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
+
 <body>
 
     <!-- Wrapper -->
@@ -49,12 +51,208 @@
                 </ul>
             </nav>
         </header>
-	</div>
 
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Intro -->
+            <article id="intro">
+                <h2 class="major">About Nikita</h2>
+                <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+                <h3>Hey There</h3>
+                <p>I'm a developer and future computer scientist from the University of Waterloo. I have been tinkering with computers ever since I can remember. Any project offers are welcome!</p>
+                <pre><code>
+#include &ltiostream&gt
+int main()
+{
+      
+    [&] ( ) { std::cout << "λ Says:"; }();
+    [&] ( ) { std::cout << "Hello ";  }();
+    [&] ( ) { std::cout << "World!";  }();
+    [&] ( ) { std::cout << std::endl; }();
+
+}
+                                    </code></pre>
+            </article>
+
+            <!-- Work -->
+            <article id="work">
+                <h2 class="major">My Experience</h2>
+                <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+                <p>
+                    I have various side projects available on my Github.
+                    Some of them include:
+                     <ul>
+                        <li>RSA Encryption/Decryption</li>
+                        <li>Object-Oriented BlackJack</li>
+                        <li>Object-Oriented Vector Program</li>
+                    </ul>
+                </p>
+            </article>
+
+            <!-- About -->
+            <article id="about">
+                <h2 class="major">My Résumé</h2>
+                <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+                <p>Here are several versions of my résumé:</p>
+                <p>In <a href="https://drive.google.com/open?id=1BpE2SzmP98rpv4cAGw3DJMKrWz_avTsa9xS4nyZMTaE">.txt</a> format.</p>
+                <p>In <a href="https://drive.google.com/open?id=1Z58qEO06LYhDn--CWyvFxwsx8h0UcvdC8OZ8wMKJ0oo">.pdf</a> format.</p>
+                <p>In <a href="https://drive.google.com/open?id=1XRh8wo2wdKjG_2mhfV_U4iR2FcUcNO32kYTCnJM3VDI">.docx</a> format.</p>
+            </article>
+
+            <!-- Contact -->
+            <article id="contact">
+                <h2 class="major">Contact Nikita</h2>
+                <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
+                    <div class="field half first">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email"  />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                    <ul class="actions">
+
+                        <li><input type="checkbox" id="demo-human" name="demo-human" >
+                            <label for="demo-human">Not a robot</label></li>
+
+                        <li><input type="submit" value="Send Message" class="special" />
+                        
+                        <?php   
+if(isset($_POST['submit'])){
+$name=$_POST['name'];
+$email=$_POST['email'];
+$message=$_POST['message'];
+$adminwebsite="orlov.a.nikita@gmail.com";
+$headers="Reply to:$email";
+mail($adminwebsite, $message, $headers);
+}
+
+
+?>
+                        
+                        
+                        </li>
+                        <li><input type="reset" value="Reset" /></li>
+
+
+
+                    </ul>
+
+
+
+
+                </form>
+                <ul class="icons">
+
+
+
+
+                    <center>
+
+                        <li><a href="https://www.linkedin.com/in/nikita-orlov-23ab13146/" class="icon fa-linkedin"><span 
+									<li><a href="https://github.com/orlovcs" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                    </center>
+
+
+
+
+
+
+
+                </ul>
+
+
+
+                <section>
+
+
+
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <thead>
+                                <tr>
+                                    <th>Token</th>
+                                    <th>Address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ETH</td>
+                                    <td>0x1D7C1D78C69E8a89b70A76C00511739961981a10</td>
+
+                                    <td> <button onclick="copyToClipboard('#p1')">Copy
+                                        </button> </td>
+
+                                </tr>
+                                <tr>
+                                    <td>BTC</td>
+                                    <td>155Moetj412s15s31VFVnUfXByXoYh6E5q</td>
+
+                                    <td> <button onclick="copyToClipboard('#p2')">Copy</button> </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>LTC</td>
+                                    <td>LgzcRRuGtoxfbJLPm2C6HczgwtcLXzgD2a</td>
+
+                                    <td> <button onclick="copyToClipboard('#p3')">Copy
+                                        </button> </td>
+
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+
+
+
+
+
+
+                <center>
+
+                    <ul class="actions">
+                        <li><a href="pgp.html" class="button">PGP KEY</a></li>
+                    </ul>
+
+                </center>
+
+
+                </section>
+
+
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy;Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
+
+    </div>
+
+    <!-- BG 
+    <div id="bg"></div>
+-->
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
+
+
