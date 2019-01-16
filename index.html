@@ -132,7 +132,7 @@ int main()
                             <label for="demo-human">Not a robot</label></li>
 
                         <li>
-<button class="special">
+<button type="button" class="special">
 <a href="mailto:orlov.a.nikita@gmail.com?Subject=Hi%20Nick!&body=Hey!" target="_top">Send</a>
 </button>
                         </li>
@@ -244,16 +244,6 @@ int main()
     <div id="bg"></div>
 -->
     <!-- Scripts -->
-    <script>
-        function mail()
-        {
-            var msg = document.getElementById("message").value;
-            var subject = document.getElementById("email").value;
-            document.location.href = "mailto:orlov.a.nikita@gmail.com?subject="
-                + encodeURIComponent(subject)
-                + "&body=" + encodeURIComponent(yourMessage);
-        }
-        </script>
 
     <script src="assets/js/pdfobject.js"></script>
     <script>PDFObject.embed("ResumeV8.pdf", "#cv");</script>
