@@ -97,10 +97,10 @@ int main()
             <!-- About -->
             <article id="about">
                 <h2 class="major">My Résumé</h2>
-                <p>Here are several versions of my résumé:</p>
-                <p>In <a href="https://drive.google.com/open?id=1BpE2SzmP98rpv4cAGw3DJMKrWz_avTsa9xS4nyZMTaE">.txt</a> format.</p>
-                <p>In <a href="https://drive.google.com/open?id=1Z58qEO06LYhDn--CWyvFxwsx8h0UcvdC8OZ8wMKJ0oo">.pdf</a> format.</p>
-                <p>In <a href="https://drive.google.com/open?id=1XRh8wo2wdKjG_2mhfV_U4iR2FcUcNO32kYTCnJM3VDI">.docx</a> format.</p>
+                <p>
+		<div id="cv"></div>	
+			
+		</p>
             </article>
 
             <!-- Contact -->
@@ -125,7 +125,7 @@ int main()
                             <label for="demo-human">Not a robot</label></li>
 
                         <li>
-<input type="submit" value="Send Message" class="special" href="mailto:someone@example.com?Subject=Hello%20again" target="_top">	
+<input type="button" value="Send Message" class="special" href="mailto:someone@example.com?Subject=Hello%20again" target="_top">	
 <a  value="Send Message" class="special" href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a>                      
                         
                         </li>
@@ -237,6 +237,8 @@ int main()
     <div id="bg"></div>
 -->
     <!-- Scripts -->
+    <script src="/js/pdfobject.js"></script>
+    <script>PDFObject.embed("/pdf/resumev8.pdf", "#cv");</script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
