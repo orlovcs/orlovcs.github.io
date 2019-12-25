@@ -8,6 +8,70 @@
 */
 
 /* Reset */
+h1.ml8 {
+   font-weight: 200;
+   color: #fff;
+   width: 6em;
+	height: 6em;
+ }
+ 
+ .ml8 .letters-container {
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   height: 1em;
+ }
+ 
+ .ml8 .letters {
+   position: relative;
+   z-index: 2;
+   display: inline-block;
+   line-height: 0.7em;
+   right: -0.12em;
+   top: -0.2em;
+ }
+ 
+ .ml8 .bang {
+   font-size: 1.4em;
+   top: auto;
+   left: -0.06em;
+ }
+ 
+ .ml8 .circle {
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+ }
+ 
+ .ml8 .circle-white {
+   width: 3em;
+   height: 3em;
+   border: 2px dashed rgb(255, 255, 255);
+   border-radius: 2em;
+ }
+ 
+ .ml8 .circle-dark {
+   width: 2.2em;
+   height: 2.2em;
+   background-color: #070606;
+   border-radius: 3em;
+   z-index: 1;
+ }
+ 
+ .ml8 .circle-dark-dashed {
+   border-radius: 3em;
+   background-color: transparent;
+   border: 3px dotted #ffffff;
+   width: 2.3em;
+   height: 2.3em;
+ }
+
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
