@@ -7,7 +7,6 @@
 
 
 
-
 <html>
 
 <head>
@@ -23,6 +22,7 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <script src="assets/js/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
 
 </head>
 
@@ -134,11 +134,10 @@ for (var i = 0; i < pathEls.length; i++) {
             <div class="content">
                 <div class="inner">
                     <h1>Nikita Orlov</h1>
+
                     <p>Student at the University of Waterloo studying computer science.</p>
-
-  
-
-
+                    <p>Wanna talk? <a href="mailto:orlov.a.nikita@gmail.com?Subject=Hi%20Nick!&body=Hey!" target="_top">Email</a> me or just try yelling really loud.
+                         Find me on  <a href="https://www.linkedin.com/in/nikita-orlov-23ab13146/" >LinkedIn</a> / <a href="https://github.com/orlovcs" >GitHub.</a></p>
 
                       <script>
                     /*DEMO*/
@@ -194,11 +193,13 @@ anime({
             </div>
             <nav>
                 <ul>
-                    <li><a href="#intro">About</a></li>
-                    <li><a href="#work">Work</a></li>
+                    <li>
+                        <a href="#intro">About</a>
+                    </li>
+                    <li><a href="#work">Projects</a></li>
                      <li><a href="staticlaverna/index.html">Notes </a></li>
-                    <li><a href="#about">Résumé</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">CV</a></li>
+                    <li><a href="#contact">PGP</a></li>
                     <!--<li><a href="#elements">Elements</a></li>-->
                 </ul>
             </nav>
@@ -208,51 +209,61 @@ anime({
         <div id="main">
 
             <!-- Intro -->
-            <article id="intro">
-                <h2 class="major">About Nikita</h2>
-                <h3>Hey There</h3>
-                <p>I'm a developer and future computer scientist from the University of Waterloo. I have been tinkering with computers ever since I can remember.</p>
-                <pre><code>
-#include &ltiostream&gt
+            <article style="width: 50rem;" id="intro">
+                <h3 class="major">About</h3>
+                <h3 id="glitch">Hey There!</h3>
+                <h3 id="glitch">Hey There!</h3>
+                <h3 id="glitch">Hey There!</h3>
+                <br>
+                <p>I make computers do things. I have been tinkering with them ever since I can remember.</p>
+
+                I've worked at:
+                <ul id="jobs">
+                    <li id="job">⟼  <a style="text-decoration: none;" id="job-title" href="https://vocalmeet.com/">VocalMeet </a>Software Developer,   Apr 2018 - Sep 2018</li>
+                </ul>
+                <pre><code>#include &ltiostream&gt
 int main()
 {
-      
-    [&] ( ) { std::cout << "λ Says:"; }();
-    [&] ( ) { std::cout << "Hello ";  }();
-    [&] ( ) { std::cout << "World!";  }();
-    [&] ( ) { std::cout << std::endl; }();
-
+ [&] ( ) { std::cout << "λ Says:"; }();
+ [&] ( ) { std::cout << "Hello ";  }();
+ [&] ( ) { std::cout << "World!";  }();
+ [&] ( ) { std::cout << std::endl; }();
 }
-                                    </code></pre>
+/*Currently in Florida*/
+</code></pre>
+
             </article>
 
             <!-- Work -->
             <article id="work">
-                <h2 class="major">My Experience</h2>
-                <p>
-                    Past positions:
-                     <ul>
-                        <li>Software Developer (Intern) at VocalMeet, Spring 2018</li>
-                     </ul>
-                </p>
-                <p>
-                    I have various side projects available on my Github.
-                    Some of them include:
-                     <ul>
-			<li><a href="https://play.google.com/store/apps/details?id=com.crimsonlabs.orlovcs.reaction&hl=en">Quantum RNG Android App</a></li>  
-                        <li>RSA Encryption/Decryption</li>
-                        <li>Object-Oriented BlackJack</li>
-                        <li>Object-Oriented Vector Program</li>
-                    </ul>
-                </p>
+            <h3 class="major">Projects</h3>
+
+
+            <ul id="projects">
+                <li id="project">
+                    <p id="project-title">Quantum RNG Android App</p>
+                    <img src="screenshot_2.png">
+                    <p id="project-description">App for generating lottery numbers, dice rolls, true random passwords and more with 500+ installs using the ANU Quantum Random Numbers Server API<br><a href="https://play.google.com/store/apps/details?id=com.crimsonlabs.orlovcs.reaction&hl=en">Play Store Link</a></p>
+                </li>  
+
+                <li id="project">
+                    <p id="project-title">RSA Encryption/Decryption</p>
+
+                </li>
+                <li id="project">
+                    <p id="project-title">Object-Oriented BlackJack</p>
+                    <!-- PUT GIFS OF THEM RUNNING HERE ON GIT-->
+
+                </li>
+                <li id="project">
+                    <p id="project-title">Object-Oriented Vector Program</p>
+
+                </li>
+            </ul>
             </article>
 
             <!-- About -->
             <article id="about">
-                <h2 class="major">My Résumé</h2>
-                <p>
-				<br>
-	<br>
 <style>
 .pdfobject-container { height: 45rem; border: 1rem solid rgba(0,0,0,.1); }
 </style>
@@ -265,108 +276,13 @@ int main()
 
             <!-- Contact -->
             <article id="contact">
-                <h2 class="major">Contact Nikita</h2>
-                <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
-      
-                    <ul class="actions">
-
-                   
-
-                        <li style="float:left;" >
-<button type="button" class="special">
-<a href="mailto:orlov.a.nikita@gmail.com?Subject=Hi%20Nick!&body=Hey!" target="_top">Email</a>
-</button>
-                        </li>
-                      
-
-
-
-                    </ul>
-
-
-
-
-                </form>
-                <ul class="icons">
-
-
-
-
-                    <center>
-
-                        <li><a href="https://www.linkedin.com/in/nikita-orlov-23ab13146/" class="icon fa-linkedin"><span 
-		<li><a href="https://github.com/orlovcs" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                    </center>
-
-
-
-
-
-
-
-                </ul>
-
-
-
-                <section>
-
-
-
-                    <div class="table-wrapper">
-                        <table class="alt">
-                            <thead>
-                                <tr>
-                                    <th>Token</th>
-                                    <th>Address</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>ETH</td>
-                                    <td>0x1D7C1D78C69E8a89b70A76C00511739961981a10</td>
-
-                                    <td> <button onclick="copyToClipboard('#p1')">Copy
-                                        </button> </td>
-
-                                </tr>
-                                <tr>
-                                    <td>BTC</td>
-                                    <td>155Moetj412s15s31VFVnUfXByXoYh6E5q</td>
-
-                                    <td> <button onclick="copyToClipboard('#p2')">Copy</button> </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td>LTC</td>
-                                    <td>LgzcRRuGtoxfbJLPm2C6HczgwtcLXzgD2a</td>
-
-                                    <td> <button onclick="copyToClipboard('#p3')">Copy
-                                        </button> </td>
-
-                                </tr>
-
-                            </tbody>
-                            <tfoot>
-
-                            </tfoot>
-                        </table>
-                    </div>
-                </section>
-
-
-
-
-
-
-                <center>
-
-                    <ul class="actions">
-                        <li><a href="pgp.html" class="button">PGP KEY</a></li>
-                    </ul>
-
-                </center>
-
+                <p class="center">
+                    -----BEGIN PGP PUBLIC KEY BLOCK-----</p>
+                    <p>mQINBFpTsxcBEAD5pNfZxgCHyYeh4l9m+eQK2y0Ar1s0cK0uOnaVYXufgtSkjrjj<br />bcdVE0+9mdfwK8BSCCGwOC8EuiQWMk88cvjzrDdyqCpHNPgvcXHAk+w+/FHR6+RL<br />FI902U6MproEzQnOuLVJNCn4lMezVHrtPIj1KLZfmyk7Ke2nCDx1eG1fW1Pr5JN6<br />R18ccIV82TeoYcndsPudmx+vaGWrcf2fZh/PFSs/Rj8hwSLUrymPKNgoaUw9CqDy<br />qfaRqhbEvGzKURsQsg6ooTtG4P3VAUGtaiPwrIVEGU1GNdD8QHqoIjVhSlEot32i<br />rNm4yl8WEnPFSuuNzVCHhRbmxyjUMZSbaZVIhzndZLP8Yn4BqQ2GEh4AnXSL9exz<br />HUlFR8Iqb05/BPdG52m6VBgT3cJX4j6i9q8lAzUXXZSGxJ3mOkW1hQrQag6aomB/<br />ZkCVQzAPlBobGtSgnH8bOPZC+1kxHLuNkvXSfxoP1td9msBJAoKH1+OqCpz7ul7U<br />KYH2SoZ96hMTcoRbzFCC2kTjVvSp5jmbUuWzN7IwfXI65RxDQlgP36HjZbnAcNXT<br />mfTFdyw3E6aMwZz/DS7pGEhXULX6D/rpAYwuFqBmnm/YFPIgoJB0H2s1+fGporps<br />1XD0K+0xg+9q0IM677NjUEjiASB3VKxMD4CBYs4+2nknb5GfXtvaCJSKMwARAQAB<br />tCFOaWtpdGEgPG9ybG92LmEubmlraXRhQGdtYWlsLmNvbT6JAk4EEwEIADgWIQQV <br />VHYQkN1qUTp8qv9PMJuaW8YcYQUCWlOzFwIbAwULCQgHAgYVCAkKCwIEFgIDAQIe<br />AQIXgAAKCRBPMJuaW8YcYXkhEADmtTHC4mTzv3M9tW+blShcklY+Fvq5VcVJXGL2<br />6G3SggFfjs6MlWAhB1UIbpPMauzObzvT8RC8aNC3zu2JFI6XSqS1hZGM9Bo2uv4h<br />7n5GXsyjxGCpiNmwXI02I0x1yNmMPMLOuN0pWoyxjVinWx5lXJ0wS26xRr0aIp/a<br />6XjD1hxMq4ib5d0OtSWkS+pdQXK+HQfMKmo03rKo5pn4LKGSdFyezH2mm4pa5kZw<br />VsrpLsaL4SaaOwuDWEqMrYYJ96xWHjVaxig+bZ8YRzzJOWEvf+4AqPq2n3X5uPdI<br />V6ZSTbVB0SA/o+khKRImMbx4he+yaRrZBhzQ1yA7rlD8JCIXxbyFYiIHhzLq9Fwa<br />JC8nwoKO76ccdqXs0bVvnac2zf2U/HGeAwQqMNjJLHq4DGLgGbX6dOSdrLvvJlG8<br />9qQwQnbtuChOl6bR8Fkj/MeoURaTVeTK4yOPALvpE3UFu7Q5nbIMtr4aXY+vir8M<br />3FOfcVncroO6k52ClBxvpEWhjUbYEiPn87rl1o+Kw88qZrnUGmXOGtlkChhWFbe8<br />S2rWqLcsJSewSxidt/j3Ml0+AwSPVcCYUyqAQbOZhFu+L7d8sSQR+cdDzAWAXsjf<br />xf1Gb/7YJ47bdfjro1V4YscGnrqNZv4+ZrcGPavY4CgOWnnDEBn88u5PVPeLfD3x<br />XTtXQrkCDQRaU7MXARAA4phgkVzbZQAoPdmcE399SKCYun1jCg6fHl0VYZ4NXBDM<br />6FgbuQ280uYCaybJoThJnb7zRznSoa66XMrCsK/xsch2NVoG1rpjn6SsXS6ZmJg3<br />5RhsfobLuY+w44n/FHaM5T8Wabwv7oIW0qm1MPrVZMsKxHBm75dbqm6Fs6IIFE9f<br />UeXJFKfAiX0rjOtFa1f+V5VlzPAgGYs8NG7XmTb33nMMTmeblOwVCmQUnfjeIugl<br />dYrljDAHiBdu6J2G5S7KN/Xd8SGRvmZjw9WA0m1YpVBD1Ms8JTGJWmKwoClpP5cm<br />N0atVSQ/US7bWi4M0GkgWVgWaUdeqW2e9/9gYC5kPOjoQvwHs3INZ0JPsMp/vO1j<br />prtHhM5q/Fm97tYOZ7TfQpdPzSjIhv4rJ1HMLJv7sdf0KPXEnpYLPRpJXlwgz1JN<br />9DwMb8MGQho92bW+CTsMgzK1kXgpWn0bPhIGqX1g/vCeVCrI17Vb4XTH002qyme7<br />c/80nNPzxp9iMJRhzrpxkDjjncnRNGnKIIPeQI3HgwEt7XBjdfV6L9BiOv3VJU/B<br />tuPBYHM1fe57veHFbhR03i9NBnLT6vOt526LfvH40zIBN8smMeZRB8atBf1sAJT2<br />mbj2GzfiRGhEydvCWSq1MtoLIgnmPWquSNb89bAoV1bAfR/08qk0+WjVAoBAYB8A<br />EQEAAYkCNgQYAQgAIBYhBBVUdhCQ3WpROnyq/08wm5pbxhxhBQJaU7MXAhsMAAoJ<br />EE8wm5pbxhxhjkUP/2BFcz7rSCCzD7fwz1lYK9qNsQ0vgyF4H4tsVzrUFzGUpbSd<br />HqgjLYtQDW2bK9sBnFIP+lQmSXmNsoHwkHsNQI50CF+xqWEphujUmhOWa//NHuaF<br />8cqb9UawQoOe8RrYp5/OhVL5EDxjkk8Es7WKwPN+1nUlKN2NUn+HSD0PG8wUjfCf<br />zkXrTG8emtkmBk7Uwz1EtRFtmPaJsciKsgugAYnB9Xp5wKvjupYOSB1t+tKUF3Z8<br />W89964cNZvNseOsJ+/xhzwYJaZOGVpWdSjB/NawX/U3h/T4fs1f7CkDIXopyUY6e<br />1qHJKFQxAkFtT3FoH+LMJbMkonPTTnAA+QQSHxhpEnZi7YO2RfPvy7gkVGjkpK0i<br />VYXD1EVsU2qLEl8e74LmJpMh3aUBqC9Y0gnKmaP5x+rqZ26ro/LogpMgy/Krwu3u<br />ijB4rv4GK0lgILJrknIdSn3k8BidQD5EcukjMvRwI80rA1B07A06P26hrHjYIhQW<br />F8dRrSmXUyMDcfGuSQ/YigkHcsDmEfw7x5Z68Dz6MxWBc4WMzh5RV1JpeaUzz4KC<br />pXa4p1j4NH4DGFug0aXq5m94DgvoiZJl/lU76rF1jI+OnfW1Gubid6vBR+G6kS3c<br />wirDF7yxyNVvPJTOqcI5nOBaSjGHgdpvVQzKQh4FwavfnzveiMIlaMn48CA8=TvXy
+                        
+                        <br />
+                        <p>-----END PGP PUBLIC KEY BLOCK-----</p>
+                            </p>            
 
                 </section>
 
