@@ -7,13 +7,249 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+img {
+	border-radius: 25px;
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+#project {
+	list-style: none;
+	text-align: center;
+}
+#project-title {
+	font-family: unset;
+	font-size: 1.5em;
+	margin-left: 10px;
+}
+#project-description {
+	list-style: none;
+	text-align: center;
+}
+
+#jobs {
+	margin-left: 10px;
+	list-style: none;
+
+}
+
+@media (min-width: 992px) {
+	#jobs  {
+	  margin-left: 0px; } }
+
+
+#job {
+	text-transform: uppercase;
+
+}
+#job-title {
+	font-family: Monoton;
+	font-size: 1.5em;
+	margin-left: 10px;
+
+}
+ 
+
+ #glitch {
+	color: #fff;
+	/*Create overlap*/
+	
+	margin: 0;
+	line-height: 0;
+	/*Animation*/
+	
+	animation: glitch1 2.5s infinite;
+ }
+ 
+ #glitch:nth-child(2) {
+	color: #67f3da;
+	animation: glitch2 2.5s infinite;
+ }
+ 
+ #glitch:nth-child(3) {
+	color: #f16f6f;
+	animation: glitch3 2.5s infinite;
+ }
+ /*Keyframes*/
+ 
+ @keyframes glitch1 {
+	0% {
+	  transform: none;
+	  opacity: 1;
+	}
+	7% {
+	  transform: skew(-0.5deg, -0.9deg);
+	  opacity: 0.75;
+	}
+	10% {
+	  transform: none;
+	  opacity: 1;
+	}
+	27% {
+	  transform: none;
+	  opacity: 1;
+	}
+	30% {
+	  transform: skew(0.8deg, -0.1deg);
+	  opacity: 0.75;
+	}
+	35% {
+	  transform: none;
+	  opacity: 1;
+	}
+	52% {
+	  transform: none;
+	  opacity: 1;
+	}
+	55% {
+	  transform: skew(-1deg, 0.2deg);
+	  opacity: 0.75;
+	}
+	50% {
+	  transform: none;
+	  opacity: 1;
+	}
+	72% {
+	  transform: none;
+	  opacity: 1;
+	}
+	75% {
+	  transform: skew(0.4deg, 1deg);
+	  opacity: 0.75;
+	}
+	80% {
+	  transform: none;
+	  opacity: 1;
+	}
+	100% {
+	  transform: none;
+	  opacity: 1;
+	}
+ }
+ 
+ @keyframes glitch2 {
+	0% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	7% {
+	  transform: translate(-2px, -3px);
+	  opacity: 0.5;
+	}
+	10% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	27% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	30% {
+	  transform: translate(-5px, -2px);
+	  opacity: 0.5;
+	}
+	35% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	52% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	55% {
+	  transform: translate(-5px, -1px);
+	  opacity: 0.5;
+	}
+	50% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	72% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	75% {
+	  transform: translate(-2px, -6px);
+	  opacity: 0.5;
+	}
+	80% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	100% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+ }
+ 
+ @keyframes glitch3 {
+	0% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	7% {
+	  transform: translate(2px, 3px);
+	  opacity: 0.5;
+	}
+	10% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	27% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	30% {
+	  transform: translate(5px, 2px);
+	  opacity: 0.5;
+	}
+	35% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	52% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	55% {
+	  transform: translate(5px, 1px);
+	  opacity: 0.5;
+	}
+	50% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	72% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	75% {
+	  transform: translate(2px, 6px);
+	  opacity: 0.5;
+	}
+	80% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+	100% {
+	  transform: none;
+	  opacity: 0.25;
+	}
+ }
+
+
+
+
  .anim, .anim svg {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
 	overflow: hidden;
-	opacity: 60%;
+	opacity: 0.6;  /* Opacity for Modern Browsers */
+	filter: alpha(opacity=60);  /* Opacity for IE8 and lower */
+	zoom: 1;  /* Fix for IE7 */
 	width: 100%;
 	height: 100%;
  }
@@ -76,7 +312,7 @@ h1.ml8 {
  .ml8 .circle-dark {
    width: 2.2em;
    height: 2.2em;
-   background-color: #070606;
+   background-color: #ffffff;
    border-radius: 3em;
    z-index: 1;
  }
@@ -338,8 +574,6 @@ h1.ml8 {
 
 		pre code {
 			display: block;
-			line-height: 1.75;
-			padding: 1rem 1.5rem;
 			overflow-x: auto;
 		}
 
@@ -1344,7 +1578,7 @@ h1.ml8 {
 
 			#header .content p {
 				text-transform: uppercase;
-				letter-spacing: 0.2rem;
+				letter-spacing: 0.1rem;
 				font-size: 0.8rem;
 				line-height: 2;
 			}
