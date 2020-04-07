@@ -294,10 +294,6 @@ int main()
 
     </div>
 
-    <!-- BG 
-    <div id="bg"></div>
--->
-    <!-- Scripts -->
 
 
     <script type="text/javascript">
@@ -390,7 +386,7 @@ int main()
                 curr = setCharAt(curr, pos_curr, new_char);
             return curr;
         }
-        function ChangingRandomString(Length)
+        function ChangingRandomString()
         {
 
             function doSomething() {
@@ -405,7 +401,10 @@ int main()
             }
 
             (function loop() {
-            var rand = Math.round(Math.random() * 500);
+            var minMS = 100; //seems to be slow enough
+            var maxMS = 500; //seems to be fast enough
+            var rand = Math.round(Math.random() * (maxMS - minMS) + minMS); //need to restrict the bounds of this to not have it become very fast or slow
+            console.log(rand)
             setTimeout(function() {
             doSomething();
             loop();  
@@ -425,7 +424,7 @@ int main()
     <script>
         document.getElementById("random").innerHTML = "NIKITA ORLOV"
        // setInterval(function(){ChangingRandomString(1)},1998); this did not work
-       setTimeout(ChangingRandomString, 3998, 1); //4k ms seems to be ideal
+       setTimeout(ChangingRandomString, 3998); //4k ms seems to be ideal
         
     </script>
 
