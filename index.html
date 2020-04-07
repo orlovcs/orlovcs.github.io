@@ -414,6 +414,7 @@ int main()
 
      
         }
+
         function setCharAt(str,index,chr) {
             if(index > str.length-1) return str;
             return str.substr(0,index) + chr + str.substr(index+1);
@@ -423,7 +424,8 @@ int main()
 
     <script>
         document.getElementById("random").innerHTML = "NIKITA ORLOV"
-        setInterval(function(){ChangingRandomString(1)},1998);
+       // setInterval(function(){ChangingRandomString(1)},1998); this did not work
+       setTimeout(ChangingRandomString, 3998, 1); //4k ms seems to be ideal
         
     </script>
 
