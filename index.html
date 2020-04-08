@@ -161,7 +161,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="notes/">Notes </a></li>
-                    <li><a href="#resume">CV</a></li>
+                    <li><a href="#cv">CV</a></li>
                     <li><a href="#contact">PGP</a></li>
                 </ul>
             </nav>
@@ -204,9 +204,9 @@ int main()
                 <ul id="projects">
                     <li id="project">
                         <p id="project-title">Quantum RNG Android App</p>
-                        <img src="screenshot_2.png">
+                        <img src="images/rng.png">
                         <p id="project-description">App for generating lottery numbers, dice rolls, true random
-                            passwords and more with 500+ installs using the ANU Quantum Random Numbers Server API<br><a
+                            passwords and more with 1600+ lifetime users using the ANU Quantum Random Numbers Server API<br><a
                                 href="https://play.google.com/store/apps/details?id=com.crimsonlabs.orlovcs.reaction&hl=en">Play
                                 Store Link</a></p>
                     </li>
@@ -250,14 +250,15 @@ int main()
             </article>
 
             <!-- About -->
-            <article id="resume">
+            <article id="cv">
                 <style>
                     .pdfobject-container {
-                        height: 45rem;
+                        height: 47rem;
+                        width: auto;
                         border: 1rem solid rgba(0, 0, 0, .1);
                     }
                 </style>
-                <div id="cv"></div>
+                <div id="pdf_cv"></div>
                 </p>
                 <br>
                 <br>
@@ -277,8 +278,6 @@ int main()
 
                 </section>
 
-
-
         </div>
 
         <!-- Footer -->
@@ -288,165 +287,12 @@ int main()
 
     </div>
 
-
-
-    <script type="text/javascript">
-        function randomString(curr) {
-            var length = curr.length;
-            console.log("curr len is " + length)
-            var pos_curr = (Math.floor(Math.random() * curr.length));
-            var old_char = curr.charAt(pos_curr);
-            var new_char = old_char;
-            //НИКИТА ОРЛОВ
-            switch (old_char) {
-                case 'N':
-                    new_char = 'Н';
-                    break;
-                case 'I':
-                    new_char = 'И';
-                    break;
-                case 'K':
-                    new_char = 'К';
-                    break;
-                case 'T':
-                    new_char = 'Т';
-                    break;
-                case 'A':
-                    new_char = 'А';
-                    break;
-
-                case 'O':
-                    new_char = 'О';
-                    break;
-                case 'R':
-                    new_char = 'Р';
-                    break;
-                case 'L':
-                    new_char = 'Л';
-                    break;
-                case 'О':
-                    new_char = 'O';
-                    break;
-                case 'V':
-                    new_char = 'В';
-                    break;
-                default:
-                    new_char = old_char;
-            }
-
-            var random_boolean = Math.random() >= 0.3;
-            if (random_boolean == false) {
-
-                switch (old_char) {
-                    case 'Н':
-                        new_char = 'N';
-                        break;
-                    case 'И':
-                        new_char = 'I';
-                        break;
-                    case 'K':
-                        new_char = 'К';
-                        break;
-                    case 'T':
-                        new_char = 'Т';
-                        break;
-                    case 'A':
-                        new_char = 'А';
-                        break;
-
-                    case 'O':
-                        new_char = 'О';
-                        break;
-                    case 'Р':
-                        new_char = 'R';
-                        break;
-                    case 'Л':
-                        new_char = 'L';
-                        break;
-                    case 'О':
-                        new_char = 'O';
-                        break;
-                    case 'В':
-                        new_char = 'V';
-                        break;
-
-                    default:
-                        new_char = old_char;
-                }
-            }
-
-
-            curr = setCharAt(curr, pos_curr, new_char);
-            return curr;
-        }
-
-        function ChangingRandomString() {
-
-            function doSomething() {
-
-                var curr = document.getElementById("random").innerHTML;
-                var c = randomString(curr);
-                document.getElementById("random").innerHTML = c;
-
-                //  var curr_title = document.getElementById("random-title").innerHTML;
-                //  document.getElementById("random-title").innerHTML = c;
-
-            }
-
-            (function loop() {
-                var minMS = 100; //seems to be slow enough
-                var maxMS = 500; //seems to be fast enough
-                var rand = Math.round(Math.random() * (maxMS - minMS) +
-                minMS); //need to restrict the bounds of this to not have it become very fast or slow
-                setTimeout(function () {
-                    doSomething();
-                    loop();
-                }, rand);
-            }());
-
-
-        }
-
-        function setCharAt(str, index, chr) {
-            if (index > str.length - 1) return str;
-            return str.substr(0, index) + chr + str.substr(index + 1);
-        }
-    </script>
-
-    <script>
-        document.getElementById("random").innerHTML = "NIKITA ORLOV"
-        // setInterval(function(){ChangingRandomString(1)},1998); this did not work
-        setTimeout(ChangingRandomString, 3998); //4k ms seems to be ideal
-
-
-        var pathEls = document.querySelectorAll('path');
-        for (var i = 0; i < pathEls.length; i++) {
-            var pathEl = pathEls[i];
-            var offset = anime.setDashoffset(pathEl);
-            pathEl.setAttribute('stroke-dashoffset', offset);
-            anime({
-                targets: pathEl,
-                strokeDashoffset: [offset, 0],
-                duration: anime.random(1000, 6000),
-                delay: anime.random(400, 2000),
-                loop: true,
-                direction: 'alternate',
-                easing: 'easeInOutSine',
-                autoplay: true
-            });
-        }
-
-
-    </script>
-
     <script src="assets/js/pdfobject.js"></script>
-    <script>
-        PDFObject.embed("ResumeV8.pdf", "#cv");
-    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom_functions.js"></script>
 
 </body>
 
